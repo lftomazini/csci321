@@ -31,6 +31,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYt-FQ-6Ls">
                                 <rect key="frame" x="257" y="15" width="64" height="30"/>
                                 <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="respondToCalculateTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="tgD-ZO-aNM"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgE-2W-9NW">
                                 <rect key="frame" x="20" y="54" width="301" height="128"/>
@@ -50,7 +53,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="1ag-vC-ctI"/>
+                <tapGestureRecognizer id="1ag-vC-ctI">
+                    <connections>
+                        <action selector="respontToViewTap:" destination="BYZ-38-t0r" id="3gs-a9-YIs"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="325" y="399"/>
         </scene>

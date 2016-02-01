@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A128D951C5FD01E0070C253 /* TipCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A128D941C5FD01E0070C253 /* TipCalculatorModel.swift */; };
 		2AF4B8951C5BDA4C00583FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B8941C5BDA4C00583FFC /* AppDelegate.swift */; };
 		2AF4B8971C5BDA4C00583FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B8961C5BDA4C00583FFC /* ViewController.swift */; };
 		2AF4B89A1C5BDA4C00583FFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF4B8981C5BDA4C00583FFC /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A128D941C5FD01E0070C253 /* TipCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorModel.swift; sourceTree = "<group>"; };
 		2AF4B8911C5BDA4C00583FFC /* Tip Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF4B8941C5BDA4C00583FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AF4B8961C5BDA4C00583FFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				2AF4B89B1C5BDA4C00583FFC /* Assets.xcassets */,
 				2AF4B89D1C5BDA4C00583FFC /* LaunchScreen.storyboard */,
 				2AF4B8A01C5BDA4C00583FFC /* Info.plist */,
+				2A128D941C5FD01E0070C253 /* TipCalculatorModel.swift */,
 			);
 			path = "Tip Calculator";
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A128D951C5FD01E0070C253 /* TipCalculatorModel.swift in Sources */,
 				2AF4B8971C5BDA4C00583FFC /* ViewController.swift in Sources */,
 				2AF4B8951C5BDA4C00583FFC /* AppDelegate.swift in Sources */,
 			);
@@ -484,6 +488,7 @@
 				2AF4B8BB1C5BDA4C00583FFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AF4B8BC1C5BDA4C00583FFC /* Build configuration list for PBXNativeTarget "Tip CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				2AF4B8BE1C5BDA4C00583FFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AF4B8BF1C5BDA4C00583FFC /* Build configuration list for PBXNativeTarget "Tip CalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				2AF4B8C11C5BDA4C00583FFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
