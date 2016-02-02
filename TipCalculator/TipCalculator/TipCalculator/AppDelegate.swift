@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Tip Calculator
+//  TipCalculator
 //
-//  Created by Luís Felipe on 1/29/16.
+//  Created by Luís Felipe on 2/1/16.
 //  Copyright © 2016 Luís Felipe. All rights reserved.
 //
 

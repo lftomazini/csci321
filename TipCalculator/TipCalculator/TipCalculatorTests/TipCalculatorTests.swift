@@ -1,15 +1,15 @@
 //
-//  Tip_CalculatorTests.swift
-//  Tip CalculatorTests
+//  TipCalculatorTests.swift
+//  TipCalculatorTests
 //
-//  Created by Luís Felipe on 1/29/16.
+//  Created by Luís Felipe on 2/1/16.
 //  Copyright © 2016 Luís Felipe. All rights reserved.
 //
 
 import XCTest
-@testable import Tip_Calculator
+@testable import TipCalculator
 
-class Tip_CalculatorTests: XCTestCase {
+class TipCalculatorTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
