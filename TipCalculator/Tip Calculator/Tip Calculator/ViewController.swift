@@ -9,16 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-    /// This is where the user enters the bill total (without tax)
-    @IBOutlet weak var textField: UITextField!
-    
-    /// Model object
-    let model = TiPCalculatorModel(totalBeforeTax: 33.25)
+    @IBOutlet weak var totalBeforeTax: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        textField.keyboardType = .NumberPad
+        /// textField.keyboardType = .NumberPad
+        ///initializeUI()
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,19 +26,15 @@ class ViewController: UIViewController {
     ///
     /// Responds to a tap on the Calculate button by calculating the tip
     ///
-    @IBAction func respondToCalculateTap() {
-        print("Working")
-    }
+
     
     /// The calculation results are displayed here
-    @IBOutlet weak var resultTextField: UITextView!
     
     ///
     /// Responds to a tap on the Calculate button by calculating the tip
     ///
     /// - parameter sender: a tap gesture recognizer
     ///
-    @IBAction func respontToViewTap(sender: UITapGestureRecognizer) {
-    }
+    
 }
 
