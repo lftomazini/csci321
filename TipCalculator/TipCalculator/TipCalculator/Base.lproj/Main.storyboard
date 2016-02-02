@@ -31,6 +31,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQr-Yg-lWP">
                                 <rect key="frame" x="257" y="24" width="64" height="30"/>
                                 <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="respondToCalculateTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="93D-Po-tfI"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXt-w6-dEj">
                                 <rect key="frame" x="20" y="57" width="301" height="128"/>
@@ -45,9 +48,17 @@
                             <outletCollection property="gestureRecognizers" destination="Fjl-Hn-V0B" appends="YES" id="lWM-WP-d7i"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="resultTextView" destination="oXt-w6-dEj" id="q5I-96-NNN"/>
+                        <outlet property="totalBeforeTax" destination="vVl-na-gTV" id="Udu-Y7-v7y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Fjl-Hn-V0B"/>
+                <tapGestureRecognizer id="Fjl-Hn-V0B">
+                    <connections>
+                        <action selector="respondToViewTap:" destination="BYZ-38-t0r" id="nbq-gU-UaQ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="305" y="354"/>
         </scene>
