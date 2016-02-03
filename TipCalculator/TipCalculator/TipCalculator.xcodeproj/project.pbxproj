@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A015E621C626D2E00E85C79 /* TipCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FFB1D1C60677C00E2C5CB /* TipCalculatorModel.swift */; };
+		2A015E641C626DC000E85C79 /* TipCalculatorModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A015E631C626DC000E85C79 /* TipCalculatorModelTests.swift */; };
 		2A8FFAF01C6062E500E2C5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FFAEF1C6062E500E2C5CB /* AppDelegate.swift */; };
 		2A8FFAF21C6062E500E2C5CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FFAF11C6062E500E2C5CB /* ViewController.swift */; };
 		2A8FFAF51C6062E500E2C5CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8FFAF31C6062E500E2C5CB /* Main.storyboard */; };
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A015E631C626DC000E85C79 /* TipCalculatorModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorModelTests.swift; sourceTree = "<group>"; };
 		2A8FFAEC1C6062E500E2C5CB /* TipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8FFAEF1C6062E500E2C5CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A8FFAF11C6062E500E2C5CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 		2A8FFB031C6062E500E2C5CB /* TipCalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				2A015E631C626DC000E85C79 /* TipCalculatorModelTests.swift */,
 				2A8FFB041C6062E500E2C5CB /* TipCalculatorTests.swift */,
 				2A8FFB061C6062E500E2C5CB /* Info.plist */,
 			);
@@ -269,7 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A015E641C626DC000E85C79 /* TipCalculatorModelTests.swift in Sources */,
 				2A8FFB051C6062E500E2C5CB /* TipCalculatorTests.swift in Sources */,
+				2A015E621C626D2E00E85C79 /* TipCalculatorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
