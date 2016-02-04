@@ -9,28 +9,55 @@
 import XCTest
 
 class TipCalculatorUITests: XCTestCase {
-        
+    /// Application proxy.
+    let app = XCUIApplication()
+    
+    ///
+    /// Put setup code here. This method is called before the invocation of
+    /// each test method in the class.
+    ///
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
+    ///
+    /// Put teardown code here. This method is called after the invocation of
+    /// each test method in the class.
+    ///
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
+    ///
+    /// Asserts that the textView formated the tips in the correct way
+    ///
+    func testForCorrectOutput() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let textField = app.textFields.element
+        textField.tap()
+        
+        let deleteKey = app.keys["delete"]
+        deleteKey.tap()
+        deleteKey.tap()
+        deleteKey.tap()
+        deleteKey.tap()
+        deleteKey.tap()
+        textField.typeText("75")
+        
+        let mainView = app.otherElements.containingType(.Button, identifier: "Calculate").element
+        mainView.tap()
+        let keyboard = app.keyboards.element
+        XCTAssertFalse(keyboard.exists)
+        
+        let calculateButton = app.buttons.element
+        calculateButton.tap()
+        
+        let textView = app.textViews.element.value as? String
+        let expected = "15%: $ 11.25\n10%: $ 7.50\n18%: $ 13.50\n20%: $ 15.00\n"
+        XCTAssertEqual(textView, expected)
     }
     
 }

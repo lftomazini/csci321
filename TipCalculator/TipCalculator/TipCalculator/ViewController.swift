@@ -32,11 +32,12 @@ class ViewController: UIViewController {
     /// Responds to a tap on the Calculate button by calculating the tip.
     ///
     @IBAction func respondToCalculateTap() {
+        print(resultTextView.text)
         model.totalBeforeTax = (totalBeforeTax.text! as NSString).doubleValue
         let possibleTips = model.possibleTips()
         var result = ""
         for (tipPercent, tipAmount) in possibleTips {
-            let tipAmountRounded = Double(round(100*tipAmount)/100)
+            let tipAmountRounded: String = String(format: "%.2f", tipAmount)
             result += "\(tipPercent)%: $ \(tipAmountRounded)\n"
         }
         resultTextView.text = result
@@ -57,6 +58,7 @@ class ViewController: UIViewController {
     /// - parameter sender: a tap gesture recognizer.
     ///
     @IBAction func respondToViewTap(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
 }
 
