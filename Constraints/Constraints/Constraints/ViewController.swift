@@ -97,12 +97,11 @@ class ViewController: UIViewController {
             let leftViewLeft = NSLayoutConstraint(item: leftView, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 20.0)
             view.addConstraint(leftViewLeft)
             
-            print(headlineView.frame.width)
             return leftView
         }
         
         ///
-        /// Adds a light  a button to centerred with the headline view and the left view
+        /// Adds a light button to centerred with the headline view and the left view
         ///
         /// - parameter headlineView: the view across the top of the screen.
         ///
