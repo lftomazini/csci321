@@ -109,8 +109,8 @@ extension ViewController {
         tapMeButton!.setTitleColor(UIColor(red: 0.247, green: 0.635, blue: 1.0, alpha: 1.0), forState: UIControlState.Normal)
         tapMeButton!.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tapMeButton!)
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[centerredView]", options: .AlignAllCenterX, metrics: nil, views: ["centerredView" : centerredView!, "tapMeButton" : tapMeButton!]))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[centerredView]", options: .AlignAllCenterY, metrics: nil, views: ["centerredView" : centerredView!]))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[centerredView]-(<=1)-[tapMeButton]", options: .AlignAllCenterX, metrics: nil, views: ["centerredView" : centerredView!, "tapMeButton" : tapMeButton!]))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("[centerredView]-(<=1)-[tapMeButton]", options: .AlignAllCenterY, metrics: nil, views: ["centerredView" : centerredView!, "tapMeButton" : tapMeButton!]))
         tapMeButton!.addTarget(self, action: "buttonTapped", forControlEvents: .TouchUpInside)
     }
     
