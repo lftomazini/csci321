@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         addVerticalConstraints()
         addCenterredView()
         addHeightConstraints()
-        //addButton()
+        addButton()
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,7 +86,6 @@ extension ViewController {
     ///
     func addCenterredView(){
         centerredView = UIView()
-        centerredView!.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
         centerredView!.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(centerredView!)
 
@@ -109,10 +108,11 @@ extension ViewController {
     ///
     func addButton(){
         tapMeButton = UIButton()
+        tapMeButton!.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
         tapMeButton!.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tapMeButton!)
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("[centerredView", options: .AlignAllCenterX, metrics: nil, views: ["centerredView" : centerredView!]))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("[centerredView", options: .AlignAllCenterY, metrics: nil, views: ["centerredView" : centerredView!]))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[centerredView]", options: .AlignAllCenterX, metrics: nil, views: ["centerredView" : centerredView!]))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[centerredView]", options: .AlignAllCenterY, metrics: nil, views: ["centerredView" : centerredView!]))
         tapMeButton!.addTarget(self, action: "buttonTapped", forControlEvents: .TouchUpInside)
     }
     
