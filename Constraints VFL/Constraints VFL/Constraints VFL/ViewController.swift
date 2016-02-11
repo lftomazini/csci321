@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     var headlineView: UIView?
     var leftView: UIView?
     var leftWidthConstraint: NSLayoutConstraint?
+    var centerredView: UIView?
+    var leftViewExpanded: Bool = false
     var tapMeButton: UIButton?
 
     override func viewDidLoad() {
@@ -19,8 +21,9 @@ class ViewController: UIViewController {
         addHeadlineView()
         addLeftView()
         addVerticalConstraints()
-        addButton()
+        addCenterredView()
         addHeightConstraints()
+        //addButton()
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,20 +77,21 @@ extension ViewController {
     ///
     func addVerticalConstraints() {
         let metrics = ["topPadding" : 60, "headlineViewHeight" : 100]
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(topPadding)-[headlineView(headlineViewHeight)]-[leftView]-20-|", options: .AlignAllLeft, metrics: metrics, views: ["headlineView" : headlineView!, "leftView" : leftView!]))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(topPadding)-[headlineView(headlineViewHeight)]-20-[leftView]-20-|", options: .AlignAllLeft, metrics: metrics, views: ["headlineView" : headlineView!, "leftView" : leftView!]))
     }
     
     ///
     ///
     ///
     ///
-    func addButton(){
-        tapMeButton = UIButton()
-        tapMeButton!.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
-        tapMeButton!.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(tapMeButton!)
+    func addCenterredView(){
+        centerredView = UIView()
+        centerredView!.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
+        centerredView!.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(centerredView!)
 
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|-[leftView]-[tapMeButton]-20-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["leftView" : leftView!, "tapMeButton" : tapMeButton!]))
+        //let metrics = ["leftWiewWidth" : ]
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-20-[leftView]-0-[centerredView]-20-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["leftView" : leftView!, "centerredView" : centerredView!]))
     }
     
     ///
@@ -96,6 +100,32 @@ extension ViewController {
     ///
     func addHeightConstraints() {
         let metrics = ["headlineViewHeight" : 100]
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V: |-20-[headlineView(headlineViewHeight)]-20-[tapMeButton]-20-|", options: .AlignAllRight, metrics: metrics, views: ["headlineView" : headlineView!, "tapMeButton" : tapMeButton!]))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-20-[headlineView(headlineViewHeight)]-20-[centerredView]-20-|", options: .AlignAllTrailing, metrics: metrics, views: ["headlineView" : headlineView!, "centerredView" : centerredView!]))
+    }
+    
+    ///
+    ///
+    ///
+    ///
+    func addButton(){
+        tapMeButton = UIButton()
+        tapMeButton!.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tapMeButton!)
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("[centerredView", options: .AlignAllCenterX, metrics: nil, views: ["centerredView" : centerredView!]))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("[centerredView", options: .AlignAllCenterY, metrics: nil, views: ["centerredView" : centerredView!]))
+        tapMeButton!.addTarget(self, action: "buttonTapped", forControlEvents: .TouchUpInside)
+    }
+    
+    ///
+    ///
+    ///
+    ///
+    func buttonTapped() {
+        let multiplier: CGFloat = leftViewExpanded ? 0.3 : 0.7
+        leftViewExpanded = !leftViewExpanded
+        view.removeConstraint(leftWidthConstraint!)
+        leftWidthConstraint = leftWidthConstraintMultiplier(multiplier)
+        view.addConstraint(leftWidthConstraint!)
+        UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 4.0, options: .LayoutSubviews, animations: {self.view.layoutIfNeeded()}, completion: nil)
     }
 }

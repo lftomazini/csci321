@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConstraintsIB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfH-7t-9g3" userLabel="Headline View">
+                                <rect key="frame" x="20" y="60" width="560" height="100"/>
+                                <color key="backgroundColor" red="0.38823529411764707" green="0.27843137254901962" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="EKE-Rv-3PR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQL-Hm-LWp" userLabel="Left View">
+                                <rect key="frame" x="20" y="180" width="168" height="400"/>
+                                <color key="backgroundColor" red="0.70588235294117641" green="0.70588235294117641" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhB-w1-Hz0" userLabel="CenterredView">
+                                <rect key="frame" x="188" y="180" width="392" height="400"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4o-Wo-Fvr">
+                                        <rect key="frame" x="173" y="185" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="K4o-Wo-Fvr" firstAttribute="centerX" secondItem="KhB-w1-Hz0" secondAttribute="centerX" id="ZGG-Ud-fps"/>
+                                    <constraint firstItem="K4o-Wo-Fvr" firstAttribute="centerY" secondItem="KhB-w1-Hz0" secondAttribute="centerY" id="zzo-d7-seW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KhB-w1-Hz0" secondAttribute="trailing" constant="20" id="1lo-gl-BUq"/>
+                            <constraint firstAttribute="bottom" secondItem="KhB-w1-Hz0" secondAttribute="bottom" constant="20" id="5uO-ZF-FvV"/>
+                            <constraint firstItem="TQL-Hm-LWp" firstAttribute="top" secondItem="zfH-7t-9g3" secondAttribute="bottom" constant="20" id="5xJ-po-Fzh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TQL-Hm-LWp" secondAttribute="bottom" constant="20" id="8Po-Wq-tuJ"/>
+                            <constraint firstAttribute="trailing" secondItem="zfH-7t-9g3" secondAttribute="trailing" constant="20" id="Zxj-aN-oXx"/>
+                            <constraint firstItem="KhB-w1-Hz0" firstAttribute="leading" secondItem="TQL-Hm-LWp" secondAttribute="trailing" id="cYO-HF-9UW"/>
+                            <constraint firstItem="TQL-Hm-LWp" firstAttribute="leading" secondItem="zfH-7t-9g3" secondAttribute="leading" id="gPm-kg-py2"/>
+                            <constraint firstItem="zfH-7t-9g3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="kbb-tP-nyr"/>
+                            <constraint firstItem="KhB-w1-Hz0" firstAttribute="height" secondItem="TQL-Hm-LWp" secondAttribute="height" id="lER-2h-1SH"/>
+                            <constraint firstItem="KhB-w1-Hz0" firstAttribute="leading" secondItem="TQL-Hm-LWp" secondAttribute="trailing" id="qkh-IP-buJ"/>
+                            <constraint firstItem="zfH-7t-9g3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="qnZ-6U-NTd"/>
+                            <constraint firstItem="TQL-Hm-LWp" firstAttribute="width" secondItem="zfH-7t-9g3" secondAttribute="width" multiplier="0.3" id="sj3-Kg-Ko2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="353"/>
+        </scene>
+    </scenes>
+</document>
