@@ -51,8 +51,8 @@ extension ViewController {
     }
     
     ///
-    ///
-    ///
+    /// Adds a light purple view on the left. It's width will be 0.3 the
+    /// headline view.
     ///
     func addLeftView() {
         leftView = UIView()
@@ -64,16 +64,15 @@ extension ViewController {
     }
     
     ///
-    ///
-    ///
+    /// Construct a constraint that specifies the width of the left view as a
+    /// fraction of the width of the headline view.
     ///
     func leftWidthConstraintMultiplier(multiplier: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: leftView!, attribute: .Width, relatedBy: .Equal, toItem: headlineView!, attribute: .Width, multiplier: multiplier, constant: 0.0)
     }
     
     ///
-    ///
-    ///
+    /// Adds a vertical constraint to the view.
     ///
     func addVerticalConstraints() {
         let metrics = ["topPadding" : 60, "headlineViewHeight" : 100]
@@ -81,8 +80,7 @@ extension ViewController {
     }
     
     ///
-    ///
-    ///
+    /// Adds a view to centerred with the headline view and the left view
     ///
     func addCenterredView(){
         centerredView = UIView()
@@ -94,8 +92,7 @@ extension ViewController {
     }
     
     ///
-    ///
-    ///
+    /// Construct a constraint that specifies the height of the centerred view
     ///
     func addHeightConstraints() {
         let metrics = ["headlineViewHeight" : 100]
@@ -103,22 +100,22 @@ extension ViewController {
     }
     
     ///
-    ///
+    /// Adds the button to the center of the centerredView
     ///
     ///
     func addButton(){
         tapMeButton = UIButton()
-        tapMeButton!.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
+        tapMeButton!.setTitle("Tap me", forState: UIControlState.Normal)
+        tapMeButton!.setTitleColor(UIColor(red: 0.247, green: 0.635, blue: 1.0, alpha: 1.0), forState: UIControlState.Normal)
         tapMeButton!.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tapMeButton!)
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[centerredView]", options: .AlignAllCenterX, metrics: nil, views: ["centerredView" : centerredView!]))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[centerredView]", options: .AlignAllCenterX, metrics: nil, views: ["centerredView" : centerredView!, "tapMeButton" : tapMeButton!]))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[centerredView]", options: .AlignAllCenterY, metrics: nil, views: ["centerredView" : centerredView!]))
         tapMeButton!.addTarget(self, action: "buttonTapped", forControlEvents: .TouchUpInside)
     }
     
     ///
-    ///
-    ///
+    /// Changes the width of the left view when the button is pressed
     ///
     func buttonTapped() {
         let multiplier: CGFloat = leftViewExpanded ? 0.3 : 0.7
