@@ -26,11 +26,14 @@
                                         <subviews>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="rmv-LE-dSs">
                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="updateSelectedWord" destination="vXZ-lx-hvc" eventType="valueChanged" id="3F6-Fg-rOE"/>
+                                                </connections>
                                             </stepper>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGG-vB-BTo">
                                                 <rect key="frame" x="124" y="0.0" width="436" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -46,21 +49,21 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="Lorem ">
                                                         <attributes>
-                                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <font key="NSFont" size="30" name="HelveticaNeue"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="ipsum">
                                                         <attributes>
-                                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <font key="NSFont" size="32" name="Helvetica"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content=" dolor sit er elit lamet, consectetaur cillium">
                                                         <attributes>
-                                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <font key="NSFont" size="30" name="HelveticaNeue"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                         </attributes>
@@ -86,6 +89,9 @@
                                                 <state key="normal" title="Orange">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ksi-ax-K93"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rs-oc-bHj">
                                                 <rect key="frame" x="165.5" y="0.0" width="64" height="64"/>
@@ -97,6 +103,9 @@
                                                 <state key="normal" title="Blue">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NDe-3p-Fly"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOZ-6o-6xr">
                                                 <rect key="frame" x="330.5" y="0.0" width="64" height="64"/>
@@ -108,6 +117,9 @@
                                                 <state key="normal" title="Green">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tqy-4z-xXw"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLG-Ee-jv0">
                                                 <rect key="frame" x="496" y="0.0" width="64" height="64"/>
@@ -119,6 +131,9 @@
                                                 <state key="normal" title="Black">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KaS-GA-jiX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -134,12 +149,18 @@
                                                 <state key="normal" title="Bold">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="changeFont:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Rou-JK-4fb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bf-fH-F5V">
                                                 <rect key="frame" x="255" y="0.0" width="50" height="30"/>
                                                 <state key="normal" title="Normal">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="changeFont:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zqS-WL-sV4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IF0-iR-Kib">
                                                 <rect key="frame" x="527" y="0.0" width="33" height="30"/>
@@ -147,6 +168,9 @@
                                                 <state key="normal" title="Italic">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="changeFont:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kd9-CR-Djk"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -161,6 +185,9 @@
                                                 <state key="normal" title="Underline">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="underline" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ut3-mw-TW4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94Z-8m-tsl">
                                                 <rect key="frame" x="511" y="0.0" width="49" height="30"/>
@@ -181,6 +208,9 @@
                                                 <state key="normal" title="No Underline">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="noUnderline" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Knm-xK-D2c"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nx-VS-4YY">
                                                 <rect key="frame" x="487" y="0.0" width="73" height="30"/>
@@ -214,6 +244,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ZJR-Hx-O34" secondAttribute="trailing" id="NQw-Ux-Clh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="selectedWordLabel" destination="tGG-vB-BTo" id="jpA-oj-Rux"/>
+                        <outlet property="selectedWordStepper" destination="rmv-LE-dSs" id="SCs-tW-l7d"/>
+                        <outlet property="sentenceLabel" destination="jfl-jK-SZp" id="O0o-5T-ocJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
