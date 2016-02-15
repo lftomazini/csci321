@@ -39,6 +39,23 @@ class ViewController: UIViewController {
     }
     
     ///
+    /// Responds to a tap on the Outline button by outlining the selected
+    /// word.
+    ///
+    @IBAction func outline() {
+        let attributes = [NSStrokeWidthAttributeName: NSNumber (double: 3.0)]
+        addAttributesToSelectedWord(attributes)
+    }
+    
+    ///
+    /// Responds to a tap on the NoOutline button by removing the outlining
+    /// from the selected word.
+    ///
+    @IBAction func noOutline() {
+        addAttributesToSelectedWord([NSStrokeWidthAttributeName: NSNumber (double: 0.0)])
+    }
+    
+    ///
     /// Responds to a tap on any of the color buttons. Changes the selected
     /// text to have the same color as the background of the button.
     ///

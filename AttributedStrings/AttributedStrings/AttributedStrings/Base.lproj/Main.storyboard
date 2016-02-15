@@ -194,6 +194,9 @@
                                                 <state key="normal" title="Outline">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="outline" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9WG-dD-ndg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -218,7 +221,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="noOutline" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8Do-h5-KYa"/>
+                                                    <action selector="noOutline" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6Dt-kJ-kLg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
