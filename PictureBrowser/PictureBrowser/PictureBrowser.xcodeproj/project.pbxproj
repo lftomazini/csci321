@@ -16,6 +16,8 @@
 		2A1710161C74E16700ADA355 /* PictureBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1710151C74E16700ADA355 /* PictureBrowserUITests.swift */; };
 		2A1710281C74E8E300ADA355 /* ThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1710271C74E8E300ADA355 /* ThumbnailCollectionViewCell.swift */; };
 		2A17102A1C74E9F200ADA355 /* Bucknell In the Virgin Islands thumb in Resources */ = {isa = PBXBuildFile; fileRef = 2A1710291C74E9F200ADA355 /* Bucknell In the Virgin Islands thumb */; };
+		2A88B0A31C77865D00B28189 /* FullImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88B0A21C77865D00B28189 /* FullImageViewController.swift */; };
+		2A88B0A51C7788F600B28189 /* Bucknell In the Virgin Islands full in Resources */ = {isa = PBXBuildFile; fileRef = 2A88B0A41C7788F600B28189 /* Bucknell In the Virgin Islands full */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		2A1710171C74E16700ADA355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A1710271C74E8E300ADA355 /* ThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
 		2A1710291C74E9F200ADA355 /* Bucknell In the Virgin Islands thumb */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Bucknell In the Virgin Islands thumb"; sourceTree = "<group>"; };
+		2A88B0A21C77865D00B28189 /* FullImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullImageViewController.swift; sourceTree = "<group>"; };
+		2A88B0A41C7788F600B28189 /* Bucknell In the Virgin Islands full */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Bucknell In the Virgin Islands full"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +108,12 @@
 				2A170FF51C74E16700ADA355 /* AppDelegate.swift */,
 				2A170FF71C74E16700ADA355 /* ViewController.swift */,
 				2A1710271C74E8E300ADA355 /* ThumbnailCollectionViewCell.swift */,
+				2A88B0A21C77865D00B28189 /* FullImageViewController.swift */,
 				2A170FF91C74E16700ADA355 /* Main.storyboard */,
 				2A170FFC1C74E16700ADA355 /* Assets.xcassets */,
 				2A170FFE1C74E16700ADA355 /* LaunchScreen.storyboard */,
 				2A1710011C74E16700ADA355 /* Info.plist */,
+				2A88B0A41C7788F600B28189 /* Bucknell In the Virgin Islands full */,
 				2A1710291C74E9F200ADA355 /* Bucknell In the Virgin Islands thumb */,
 			);
 			path = PictureBrowser;
@@ -235,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A88B0A51C7788F600B28189 /* Bucknell In the Virgin Islands full in Resources */,
 				2A1710001C74E16700ADA355 /* LaunchScreen.storyboard in Resources */,
 				2A17102A1C74E9F200ADA355 /* Bucknell In the Virgin Islands thumb in Resources */,
 				2A170FFD1C74E16700ADA355 /* Assets.xcassets in Resources */,
@@ -264,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A170FF81C74E16700ADA355 /* ViewController.swift in Sources */,
+				2A88B0A31C77865D00B28189 /* FullImageViewController.swift in Sources */,
 				2A170FF61C74E16700ADA355 /* AppDelegate.swift in Sources */,
 				2A1710281C74E8E300ADA355 /* ThumbnailCollectionViewCell.swift in Sources */,
 			);
