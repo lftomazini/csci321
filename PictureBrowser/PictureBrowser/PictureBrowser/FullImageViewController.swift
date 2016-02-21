@@ -15,8 +15,7 @@ class FullImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        imageView.image = image
     }
 
     override func didReceiveMemoryWarning() {

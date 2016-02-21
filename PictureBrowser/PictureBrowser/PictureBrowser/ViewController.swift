@@ -104,6 +104,27 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         let indexPath = thumbnailCollection.indexPathsForSelectedItems()!.first!
         return fileList[indexPath.row]
     }
+    
+    ///
+    /// Prepares the full image view controller for the segue. The user has
+    /// just tapped on a thumbnail. Gets the path to the corresponding full
+    /// image, creates a UIImage object and initializes the full image view
+    /// controller with it. Also sets the title fot the image to be the file 
+    /// name without the extension.
+    ///
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier ==  "showFull" {
+            let fullImageViewController = segue.destinationViewController as! FullImageViewController
+            let filePath = pathToCorrespondingFullImage()
+            let image: UIImage? = UIImage(named: filePath)
+            if image == nil {
+                print("Image is nil")
+            } else {
+                fullImageViewController.title = (selectedThumbnailFileName() as NSString).stringByDeletingPathExtension
+                fullImageViewController.image = image
+            }
+        }
+    }
 }
 
 // MARK: - UICollectionViewDataSource
