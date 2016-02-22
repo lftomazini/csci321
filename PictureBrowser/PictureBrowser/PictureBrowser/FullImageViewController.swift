@@ -38,6 +38,7 @@ class FullImageViewController: UIViewController, UIScrollViewDelegate {
     func addImageView() {
         if let theImage = image {
             imageView = UIImageView(image:  theImage)
+            imageView?.translatesAutoresizingMaskIntoConstraints = false
             imageView!.image = theImage
             scrollView.contentSize = theImage.size
             scrollView.zoomScale = 1.0
