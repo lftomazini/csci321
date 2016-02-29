@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     let imageView = UIImageView(frame: CGRectZero)
+    var image: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,7 @@ class ViewController: UIViewController {
         if imageData == nil {
             return
         }
-        let image = UIImage(data: imageData!)
+        image = UIImage(data: imageData!)
         if image == nil {
             return
         }

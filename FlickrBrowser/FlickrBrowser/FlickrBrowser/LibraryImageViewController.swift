@@ -14,9 +14,6 @@ class LibraryImageViewController: ViewController, UIScrollViewDelegate {
     /// insert thisview into a scroll view.
     var imgView: UIImageView?
     
-    /// This is the image to be displayed.
-    var image: UIImage?
-    
     /// Should we adjust the zoom scale so that the entire image fits on the
     /// screen? Once the user has pinched, we stop the automatic adjustment.
     /// Otherwise, the automatic adjusting continues, even when the user
@@ -38,14 +35,10 @@ class LibraryImageViewController: ViewController, UIScrollViewDelegate {
     ///
     func addImageView() {
         if let theImage = image {
-            imgView = UIImageView(image:  theImage)
-            imgView?.translatesAutoresizingMaskIntoConstraints = false
-            imgView!.image = theImage
             scrollView.contentSize = theImage.size
             scrollView.zoomScale = 1.0
             scrollView.minimumZoomScale = 0.1
             scrollView.maximumZoomScale = 5.0
-            scrollView.addSubview(imgView!)
         } else {
             print("\(__FUNCTION__): image isn't set!")
         }
