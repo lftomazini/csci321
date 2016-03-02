@@ -38,7 +38,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="Show Imge" id="X3X-Un-QPR"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="Show Image" id="X3X-Un-QPR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="408" y="354"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlickrBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ImageViewController" customModule="FlickrBrowser" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>

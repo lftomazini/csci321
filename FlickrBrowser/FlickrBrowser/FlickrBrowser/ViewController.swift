@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ImageViewController.swift
 //  FlickrBrowser
 //
 //  Created by Luís Felipe on 2/26/16.
@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+///
+/// Sets and changes the image on the view.
+///
+class ImageViewController: UIViewController, UIScrollViewDelegate {
     /// Should we adjust the zoom scale so that the entire image fits on the
     /// screen? Once the user has pinched, we stop the automatic adjustment.
     /// Otherwise, the automatic adjusting continues, even when the user
@@ -30,8 +33,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         scrollView.addSubview(imageView)
         scrollView.delegate = self
-        addImageView()
         resetImage()
+        addImageView()
     }
 
     ///
@@ -93,5 +96,24 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
 }
 
+// MARK: - UIScrollViewDelegate
+
+extension ImageViewController {
+    
+    ///
+    /// Lets the scroll view know that we want to scroll the image
+    ///
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
+    ///
+    /// Records when the user has zoomed so we can stop automatically adjusting
+    /// the scale factor.
+    ///
+    func scrollViewDidEndZooming(scrollView: UIScrollView, withView view: UIView?, atScale scale: CGFloat) {
+        userHasZoomed = true
+    }
+}
 
 

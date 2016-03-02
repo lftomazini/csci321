@@ -8,6 +8,10 @@
 
 import UIKit
 
+///
+/// Handles the process of getting the images corresponding to the row 
+/// in the table view that the user tapped.
+///
 class FlickrPhotosTableViewController: UITableViewController {
 
     /// Each array entry is a dictionary that describes a Flickr photo.
@@ -76,16 +80,12 @@ class FlickrPhotosTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier ==  "Flickr Photo" {
-//            let flickrPhotosTableViewController = segue.destinationViewController as! FlickrPhotosTableViewController
-//            let filePath = FlickrDownloader.bucknellPhotos()
-//            let image: UIImage? = UIImage(named: filePath)
-//            if image == nil {
-//                print("Image is nil")
-//            } else {
-//                flickrPhotosTableViewController.title = (selectedThumbnailFileName() as NSString).stringByDeletingPathExtension
-//                flickrPhotosTableViewController.image = image
-//            }
-//        }
+        if segue.identifier ==  "Show Image" {
+            let flickrPhotosTableViewController = segue.destinationViewController as! ImageViewController
+            let photos = FlickrDownloader.bucknellPhotos()
+            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+            let url = FlickrDownloader.urlForPhoto(photos![(indexPath?.row)!], format: FlickrPhotoFormat.Original)
+            flickrPhotosTableViewController.imageURL  = url
+        }
     }
 }
