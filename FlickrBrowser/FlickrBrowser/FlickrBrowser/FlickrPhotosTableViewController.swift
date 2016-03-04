@@ -79,13 +79,13 @@ class FlickrPhotosTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier ==  "Show Image" {
-            let flickrPhotosTableViewController = segue.destinationViewController as! ImageViewController
-            let photos = FlickrDownloader.bucknellPhotos()
-            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
-            let url = FlickrDownloader.urlForPhoto(photos![(indexPath?.row)!], format: FlickrPhotoFormat.Original)
-            flickrPhotosTableViewController.imageURL  = url
-        }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailNavController = storyboard.instantiateViewControllerWithIdentifier("detailNavController") as! UINavigationController
+        let imageViewController = detailNavController.topViewController as! ImageViewController
+        let photoURL = FlickrDownloader.urlForPhoto(photos[indexPath.row], format: .Large)
+        imageViewController.imageURL = photoURL
+        imageViewController.title = titleForRow(indexPath.row)
+        showDetailViewController(detailNavController, sender: self)
     }
 }
