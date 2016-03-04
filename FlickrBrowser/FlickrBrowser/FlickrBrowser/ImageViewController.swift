@@ -31,6 +31,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(imageView)
         scrollView.delegate = self
         resetImage()
