@@ -12,7 +12,7 @@ import UIKit
 /// Handles the process of getting the images corresponding to the row 
 /// in the table view that the user tapped.
 ///
-class FlickrPhotosTableViewController: UITableViewController {
+class FlickrPhotosTableViewController: UITableViewController, UISplitViewControllerDelegate {
 
     /// Each array entry is a dictionary that describes a Flickr photo.
     var photos: [[String: AnyObject]] = [] {
@@ -21,8 +21,11 @@ class FlickrPhotosTableViewController: UITableViewController {
         }
     }
     
+    private var collapseDetailViewController = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        splitViewController?.delegate = self
         if let newPhotos = FlickrDownloader.bucknellPhotos() {
             photos = newPhotos
             title = "Bucknell Photos"
@@ -87,5 +90,14 @@ class FlickrPhotosTableViewController: UITableViewController {
         imageViewController.imageURL = photoURL
         imageViewController.title = titleForRow(indexPath.row)
         showDetailViewController(detailNavController, sender: self)
+        imageViewController.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+        imageViewController.navigationItem.leftItemsSupplementBackButton = true
+        collapseDetailViewController = false
+    }
+    
+    // MARK: - UISplitViewControllerDelegate
+    
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+        return collapseDetailViewController
     }
 }
