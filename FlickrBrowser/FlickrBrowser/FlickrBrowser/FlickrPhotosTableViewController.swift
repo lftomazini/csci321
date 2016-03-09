@@ -17,7 +17,9 @@ class FlickrPhotosTableViewController: UITableViewController, UISplitViewControl
     /// Each array entry is a dictionary that describes a Flickr photo.
     var photos: [[String: AnyObject]] = [] {
         didSet {
-            tableView.reloadData()
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+            })
         }
     }
     
@@ -32,6 +34,25 @@ class FlickrPhotosTableViewController: UITableViewController, UISplitViewControl
         }
     }
 
+    
+    @IBAction func loadPhotos() {
+        let refreshOperation = NSBlockOperation(block: {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+            if let photos = FlickrDownloader.latestFlickrPhotos() {
+                self.photos = photos
+            }
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        })
+        refreshOperation.completionBlock = {
+            dispatch_async(dispatch_get_main_queue(), {
+                self.title = "Recent Flickr Photos"
+                self.refreshControl?.endRefreshing()
+            })
+        }
+        refreshControl?.endRefreshing()
+        NSOperationQueue().addOperation(refreshOperation)
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -90,8 +111,6 @@ class FlickrPhotosTableViewController: UITableViewController, UISplitViewControl
         imageViewController.imageURL = photoURL
         imageViewController.title = titleForRow(indexPath.row)
         showDetailViewController(detailNavController, sender: self)
-        imageViewController.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-        imageViewController.navigationItem.leftItemsSupplementBackButton = true
         collapseDetailViewController = false
     }
     

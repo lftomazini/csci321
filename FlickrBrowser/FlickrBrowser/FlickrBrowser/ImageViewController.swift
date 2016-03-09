@@ -12,6 +12,17 @@ import UIKit
 /// Sets and changes the image on the view.
 ///
 class ImageViewController: UIViewController, UIScrollViewDelegate {
+    
+    /// The activity indicator that's displayed while an image is loading.
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    /// This is an NSOperation subclass for downloading images in the background.
+    var downloader: ImageDownloader?
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    let imageView = UIImageView(frame: CGRectZero)
+    var image: UIImage?
+    
     /// Should we adjust the zoom scale so that the entire image fits on the
     /// screen? Once the user has pinched, we stop the automatic adjustment.
     /// Otherwise, the automatic adjusting continues, even when the user
@@ -25,17 +36,14 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    let imageView = UIImageView(frame: CGRectZero)
-    var image: UIImage?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        //imageView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(imageView)
         scrollView.delegate = self
         resetImage()
-        addImageView()
+        navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+        navigationItem.leftItemsSupplementBackButton = true
     }
 
     ///
@@ -51,34 +59,26 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         if imageURL == nil {
             return
         }
-        let imageData = NSData(contentsOfURL: imageURL!)
-        if imageData == nil {
-            return
+        downloader = ImageDownloader(imageURL: imageURL!)
+        downloader!.qualityOfService = .UserInitiated
+        downloader!.completionBlock = {
+            if self.downloader!.cancelled || self.downloader!.image == nil {
+                return
+            }
+            NSThread.sleepForTimeInterval(4.0)
+            dispatch_async(dispatch_get_main_queue(), {
+                self.scrollView.zoomScale = 1.0
+                self.scrollView.contentSize = self.downloader!.image!.size
+                self.scrollView.minimumZoomScale = 0.1
+                self.scrollView.maximumZoomScale = 5.0
+                self.imageView.image = self.downloader!.image!
+                self.imageView.translatesAutoresizingMaskIntoConstraints = false
+                self.imageView.frame = CGRectMake(0.0, 0.0, self.downloader!.image!.size.width, self.downloader!.image!.size.height)
+                self.spinner.stopAnimating()
+            })
         }
-        image = UIImage(data: imageData!)
-        if image == nil {
-            return
-        }
-        scrollView.contentSize = image!.size
-        scrollView.zoomScale = 1.0
-        imageView.image = image!
-        imageView.frame = CGRectMake(0.0, 0.0, image!.size.width, image!.size.height)
-    }
-    
-    ///
-    /// Creates an image view and adds it to the scroll view. If, for some
-    /// reason the iage property hasn't been set (shouldn't happen), don't do
-    /// anything.
-    ///
-    func addImageView() {
-        if let theImage = image {
-            scrollView.contentSize = theImage.size
-            scrollView.zoomScale = 1.0
-            scrollView.minimumZoomScale = 0.1
-            scrollView.maximumZoomScale = 5.0
-        } else {
-            print("\(__FUNCTION__): image isn't set!")
-        }
+        spinner.startAnimating()
+        NSOperationQueue().addOperation(downloader!)
     }
     
     ///
@@ -95,6 +95,16 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    /// 
+    /// Cancel if a download is occuring
+    ///
+    override func viewWillDisappear(animated: Bool) {
+        if self.downloader!.executing || self.downloader!.ready {
+            self.downloader!.cancel()
+            print(self.downloader!.cancelled)
+        }
+        super.viewWillDisappear(true)
+    }
 }
 
 // MARK: - UIScrollViewDelegate

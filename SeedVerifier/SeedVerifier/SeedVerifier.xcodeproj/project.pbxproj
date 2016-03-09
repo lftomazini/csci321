@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A5548561C8E52C400E6937C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5548551C8E52C400E6937C /* AppDelegate.swift */; };
+		2A5548581C8E52C400E6937C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5548571C8E52C400E6937C /* ViewController.swift */; };
+		2A55485A1C8E52C400E6937C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5548591C8E52C400E6937C /* Assets.xcassets */; };
+		2A55485D1C8E52C400E6937C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A55485B1C8E52C400E6937C /* Main.storyboard */; };
+		2A5548681C8E52C400E6937C /* SeedVerifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5548671C8E52C400E6937C /* SeedVerifierTests.swift */; };
+		2A5548731C8E52C400E6937C /* SeedVerifierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5548721C8E52C400E6937C /* SeedVerifierUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A5548641C8E52C400E6937C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A55484A1C8E52C400E6937C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A5548511C8E52C400E6937C;
+			remoteInfo = SeedVerifier;
+		};
+		2A55486F1C8E52C400E6937C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A55484A1C8E52C400E6937C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A5548511C8E52C400E6937C;
+			remoteInfo = SeedVerifier;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A5548521C8E52C400E6937C /* SeedVerifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeedVerifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A5548551C8E52C400E6937C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2A5548571C8E52C400E6937C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A5548591C8E52C400E6937C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A55485C1C8E52C400E6937C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2A55485E1C8E52C400E6937C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A5548631C8E52C400E6937C /* SeedVerifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeedVerifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A5548671C8E52C400E6937C /* SeedVerifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedVerifierTests.swift; sourceTree = "<group>"; };
+		2A5548691C8E52C400E6937C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A55486E1C8E52C400E6937C /* SeedVerifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeedVerifierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A5548721C8E52C400E6937C /* SeedVerifierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedVerifierUITests.swift; sourceTree = "<group>"; };
+		2A5548741C8E52C400E6937C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A55484F1C8E52C400E6937C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A5548601C8E52C400E6937C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A55486B1C8E52C400E6937C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A5548491C8E52C400E6937C = {
+			isa = PBXGroup;
+			children = (
+				2A5548541C8E52C400E6937C /* SeedVerifier */,
+				2A5548661C8E52C400E6937C /* SeedVerifierTests */,
+				2A5548711C8E52C400E6937C /* SeedVerifierUITests */,
+				2A5548531C8E52C400E6937C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A5548531C8E52C400E6937C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A5548521C8E52C400E6937C /* SeedVerifier.app */,
+				2A5548631C8E52C400E6937C /* SeedVerifierTests.xctest */,
+				2A55486E1C8E52C400E6937C /* SeedVerifierUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A5548541C8E52C400E6937C /* SeedVerifier */ = {
+			isa = PBXGroup;
+			children = (
+				2A5548551C8E52C400E6937C /* AppDelegate.swift */,
+				2A5548571C8E52C400E6937C /* ViewController.swift */,
+				2A5548591C8E52C400E6937C /* Assets.xcassets */,
+				2A55485B1C8E52C400E6937C /* Main.storyboard */,
+				2A55485E1C8E52C400E6937C /* Info.plist */,
+			);
+			path = SeedVerifier;
+			sourceTree = "<group>";
+		};
+		2A5548661C8E52C400E6937C /* SeedVerifierTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A5548671C8E52C400E6937C /* SeedVerifierTests.swift */,
+				2A5548691C8E52C400E6937C /* Info.plist */,
+			);
+			path = SeedVerifierTests;
+			sourceTree = "<group>";
+		};
+		2A5548711C8E52C400E6937C /* SeedVerifierUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2A5548721C8E52C400E6937C /* SeedVerifierUITests.swift */,
+				2A5548741C8E52C400E6937C /* Info.plist */,
+			);
+			path = SeedVerifierUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A5548511C8E52C400E6937C /* SeedVerifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A5548771C8E52C400E6937C /* Build configuration list for PBXNativeTarget "SeedVerifier" */;
+			buildPhases = (
+				2A55484E1C8E52C400E6937C /* Sources */,
+				2A55484F1C8E52C400E6937C /* Frameworks */,
+				2A5548501C8E52C400E6937C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeedVerifier;
+			productName = SeedVerifier;
+			productReference = 2A5548521C8E52C400E6937C /* SeedVerifier.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2A5548621C8E52C400E6937C /* SeedVerifierTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A55487A1C8E52C400E6937C /* Build configuration list for PBXNativeTarget "SeedVerifierTests" */;
+			buildPhases = (
+				2A55485F1C8E52C400E6937C /* Sources */,
+				2A5548601C8E52C400E6937C /* Frameworks */,
+				2A5548611C8E52C400E6937C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A5548651C8E52C400E6937C /* PBXTargetDependency */,
+			);
+			name = SeedVerifierTests;
+			productName = SeedVerifierTests;
+			productReference = 2A5548631C8E52C400E6937C /* SeedVerifierTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2A55486D1C8E52C400E6937C /* SeedVerifierUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A55487D1C8E52C400E6937C /* Build configuration list for PBXNativeTarget "SeedVerifierUITests" */;
+			buildPhases = (
+				2A55486A1C8E52C400E6937C /* Sources */,
+				2A55486B1C8E52C400E6937C /* Frameworks */,
+				2A55486C1C8E52C400E6937C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A5548701C8E52C400E6937C /* PBXTargetDependency */,
+			);
+			name = SeedVerifierUITests;
+			productName = SeedVerifierUITests;
+			productReference = 2A55486E1C8E52C400E6937C /* SeedVerifierUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A55484A1C8E52C400E6937C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Luís Felipe";
+				TargetAttributes = {
+					2A5548511C8E52C400E6937C = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					2A5548621C8E52C400E6937C = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 2A5548511C8E52C400E6937C;
+					};
+					2A55486D1C8E52C400E6937C = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 2A5548511C8E52C400E6937C;
+					};
+				};
+			};
+			buildConfigurationList = 2A55484D1C8E52C400E6937C /* Build configuration list for PBXProject "SeedVerifier" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2A5548491C8E52C400E6937C;
+			productRefGroup = 2A5548531C8E52C400E6937C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A5548511C8E52C400E6937C /* SeedVerifier */,
+				2A5548621C8E52C400E6937C /* SeedVerifierTests */,
+				2A55486D1C8E52C400E6937C /* SeedVerifierUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A5548501C8E52C400E6937C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A55485A1C8E52C400E6937C /* Assets.xcassets in Resources */,
+				2A55485D1C8E52C400E6937C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A5548611C8E52C400E6937C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A55486C1C8E52C400E6937C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A55484E1C8E52C400E6937C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A5548581C8E52C400E6937C /* ViewController.swift in Sources */,
+				2A5548561C8E52C400E6937C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A55485F1C8E52C400E6937C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A5548681C8E52C400E6937C /* SeedVerifierTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A55486A1C8E52C400E6937C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A5548731C8E52C400E6937C /* SeedVerifierUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A5548651C8E52C400E6937C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A5548511C8E52C400E6937C /* SeedVerifier */;
+			targetProxy = 2A5548641C8E52C400E6937C /* PBXContainerItemProxy */;
+		};
+		2A5548701C8E52C400E6937C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A5548511C8E52C400E6937C /* SeedVerifier */;
+			targetProxy = 2A55486F1C8E52C400E6937C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2A55485B1C8E52C400E6937C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A55485C1C8E52C400E6937C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A5548751C8E52C400E6937C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2A5548761C8E52C400E6937C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2A5548781C8E52C400E6937C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SeedVerifier/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LuisFelipe.SeedVerifier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2A5548791C8E52C400E6937C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SeedVerifier/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LuisFelipe.SeedVerifier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2A55487B1C8E52C400E6937C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SeedVerifierTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LuisFelipe.SeedVerifierTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeedVerifier.app/Contents/MacOS/SeedVerifier";
+			};
+			name = Debug;
+		};
+		2A55487C1C8E52C400E6937C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SeedVerifierTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LuisFelipe.SeedVerifierTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeedVerifier.app/Contents/MacOS/SeedVerifier";
+			};
+			name = Release;
+		};
+		2A55487E1C8E52C400E6937C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SeedVerifierUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LuisFelipe.SeedVerifierUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SeedVerifier;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2A55487F1C8E52C400E6937C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SeedVerifierUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LuisFelipe.SeedVerifierUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SeedVerifier;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A55484D1C8E52C400E6937C /* Build configuration list for PBXProject "SeedVerifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A5548751C8E52C400E6937C /* Debug */,
+				2A5548761C8E52C400E6937C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A5548771C8E52C400E6937C /* Build configuration list for PBXNativeTarget "SeedVerifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A5548781C8E52C400E6937C /* Debug */,
+				2A5548791C8E52C400E6937C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2A55487A1C8E52C400E6937C /* Build configuration list for PBXNativeTarget "SeedVerifierTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A55487B1C8E52C400E6937C /* Debug */,
+				2A55487C1C8E52C400E6937C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2A55487D1C8E52C400E6937C /* Build configuration list for PBXNativeTarget "SeedVerifierUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A55487E1C8E52C400E6937C /* Debug */,
+				2A55487F1C8E52C400E6937C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A55484A1C8E52C400E6937C /* Project object */;
+}
