@@ -65,7 +65,6 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
             if self.downloader!.cancelled || self.downloader!.image == nil {
                 return
             }
-            NSThread.sleepForTimeInterval(4.0)
             dispatch_async(dispatch_get_main_queue(), {
                 self.scrollView.zoomScale = 1.0
                 self.scrollView.contentSize = self.downloader!.image!.size
@@ -101,7 +100,6 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     override func viewWillDisappear(animated: Bool) {
         if self.downloader!.executing || self.downloader!.ready {
             self.downloader!.cancel()
-            print(self.downloader!.cancelled)
         }
         super.viewWillDisappear(true)
     }
