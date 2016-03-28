@@ -91,12 +91,29 @@ class FlickrPhotosTableViewController: UITableViewController, UISplitViewControl
     }
     
     ///
+    ///
+    ///
+    ///
+    ///
+    func thumbnailForRow(row: Int) -> UIImage? {
+        guard let thumbnailURL = FlickrDownloader.urlForPhoto(photos[row], format: .Square),
+            let thumbnailData = NSData(contentsOfURL: thumbnailURL) else {
+                return nil
+        }
+        let thumbnailImage = UIImage(data: thumbnailData)
+        return thumbnailImage
+    }
+    
+    ///
     /// Gets a table cell and initializes it with a title and subtitle.
     ///
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Flickr Photo", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel!.text = titleForRow(indexPath.row)
+        cell.textLabel?.text = titleForRow(indexPath.row)
         cell.detailTextLabel!.text = subtitleForRow(indexPath.row)
+        if let thumbnail = thumbnailForRow(indexPath.row) {
+            cell.imageView?.image = thumbnail
+        }
         return cell
     }
 

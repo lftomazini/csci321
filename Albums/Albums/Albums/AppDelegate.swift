@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  FlickrBrowser
+//  Albums
 //
-//  Created by Luís Felipe on 2/26/16.
+//  Created by Luís Felipe on 3/25/16.
 //  Copyright © 2016 Luís Felipe. All rights reserved.
 //
 
@@ -34,18 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        presentAlert()
-        presentAlert()
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-    
-    func presentAlert() {
-        let alert = UIAlertController(title: "Network Notification", message: "You are not connected to the Internet", preferredStyle: .Alert)
-        let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alert.addAction(okAction)
     }
 
 
