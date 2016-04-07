@@ -19,5 +19,9 @@ class CacheManager: NSObject, NSCacheDelegate {
     func getCache(key: String) -> NSPurgeableData? {
         return (cache.objectForKey(key) == nil) ? nil : cache.objectForKey(key) as? NSPurgeableData
     }
+    
+    func cache(cache: NSCache, willEvictObject obj: AnyObject) {
+        print("Called willEvictObject")
+    }
 
 }

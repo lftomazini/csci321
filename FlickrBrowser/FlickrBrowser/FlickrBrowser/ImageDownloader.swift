@@ -19,8 +19,12 @@ class ImageDownloader: NSOperation {
     /// Image downloaded
     var image: UIImage?
     
-    init (imageURL: NSURL) {
+    /// ID of the image
+    var imageID: String
+    
+    init (imageURL: NSURL, imageID: String) {
         self.imageURL = imageURL
+        self.imageID = imageID
     }
     
     ///
@@ -31,9 +35,16 @@ class ImageDownloader: NSOperation {
             if self.cancelled {
                 return
             }
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-            let imageData = NSData(contentsOfURL: self.imageURL)
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            var imageData: NSPurgeableData?
+            imageData = CacheManager.sharedInstance.getCache(self.imageID)
+            if imageData == nil {
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+                imageData = NSPurgeableData(contentsOfURL: self.imageURL)
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                if imageData != nil {
+                    CacheManager.sharedInstance.setCache(imageData!, forKey: self.imageID)
+                }
+            }
             if self.cancelled || imageData == nil {
                 return
             }
