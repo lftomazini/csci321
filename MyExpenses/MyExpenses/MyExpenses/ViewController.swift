@@ -15,11 +15,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func cancel(segue: UIStoryboardSegue) {
+        
     }
-
+ 
+    @IBAction func done(segue: UIStoryboardSegue) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }
 
