@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Expenses: CustomStringConvertible {
+class Expenses: CustomStringConvertible, Comparable {
     
     /// Available categories for expenses
     enum Categories {
@@ -43,28 +43,28 @@ class Expenses: CustomStringConvertible {
         self.value = value
         self.item = item
     }
-    
-    ///
-    /// Overloads the less than operator so we can compare expenses.
-    /// - parameter left: left operand
-    /// - parameter right: right operand
-    /// - returns: true if left < right, false otherwise
-    ///
-//    func <(left: Expenses, right: Expenses) -> Bool {
+}
+
+///
+/// Overloads the less than operator so we can compare expenses.
+/// - parameter left: left operand
+/// - parameter right: right operand
+/// - returns: true if left < right, false otherwise
+///
+    func <(left: Expenses, right: Expenses) -> Bool {
 //    if left.band == right.band {
 //    return left.title < right.title
 //    }
 //    return left.band < right.band
-//    }
-    
-    ///
-    /// Overloads the equality operator so we can compare expenses.
-    /// - parameter left: left operand
-    /// - parameter right: right operand
-    /// - returns: true if left == right, false otherwise.
-    ///
-//    func ==(left: Expenses, right: Expenses) -> Bool {
-//    return left.date == right.date && left.value == right.value && left.item == right.item && left.category == right.category
-//    }
+        return true
+    }
 
-}
+///
+/// Overloads the equality operator so we can compare expenses.
+/// - parameter left: left operand
+/// - parameter right: right operand
+/// - returns: true if left == right, false otherwise.
+
+    func ==(left: Expenses, right: Expenses) -> Bool {
+    return left.date == right.date && left.value == right.value && left.item == right.item && left.category == right.category
+    }
