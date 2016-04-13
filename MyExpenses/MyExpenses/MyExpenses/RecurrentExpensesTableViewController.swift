@@ -10,6 +10,13 @@ import UIKit
 
 class RecurrentExpensesTableViewController: UITableViewController {
 
+    /// Each array entry is a dictionary that describes a expense
+    var recurrentExpenses: [[String: Expenses]] = [] {
+        didSet{
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,11 +26,35 @@ class RecurrentExpensesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
+    ///
+    /// There's a table row for each recurrent expense
+    ///
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return recurrentExpenses.count
     }
+    
+    ///
+    /// Determines the title for a cell. The title is just the item name and its value.
+    ///
+    /// - parameter row: the table row that needs a title
+    ///
+    /// - returns: the recurrent expense's title
+    ///
+//    func titleForRow(row: Int) -> String {
+//        return title = recurrentExpenses[row].item + " - $" + recurrentExpenses[row].value
+//    }
+//    
+//    ///
+//    /// Determines the title for a cell. The title is just the item name and its value.
+//    ///
+//    /// - parameter row: the table row that needs a title
+//    ///
+//    /// - returns: the recurrent expense's title
+//    ///
+//    func subtitleForRow(row: Int) -> String {
+//        return subtitle = 
+//    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

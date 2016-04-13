@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4s9-nq-Tw4">
-                                <rect key="frame" x="40" y="64" width="520" height="337"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4s9-nq-Tw4">
+                                <rect key="frame" x="40" y="64" width="520" height="573"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNC-JC-lzL">
                                         <rect key="frame" x="0.0" y="0.0" width="520" height="30"/>
@@ -115,40 +115,85 @@
                                             <constraint firstItem="xdG-8e-LUj" firstAttribute="height" secondItem="SHR-nX-s8j" secondAttribute="height" id="BOK-dH-82S"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WiN-H0-edK">
-                                        <rect key="frame" x="0.0" y="100" width="520" height="237"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Sm4-Mi-qJ1">
+                                        <rect key="frame" x="0.0" y="100" width="520" height="473"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqm-2W-z0y">
-                                                <rect key="frame" x="0.0" y="0.0" width="520" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="bIn-uU-SmP"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="va5-mj-UlM">
-                                                <rect key="frame" x="0.0" y="21" width="520" height="216"/>
-                                                <date key="date" timeIntervalSinceReferenceDate="482206317.18335998">
-                                                    <!--2016-04-13 02:11:57 +0000-->
-                                                </date>
-                                            </datePicker>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WiN-H0-edK">
+                                                <rect key="frame" x="0.0" y="0.0" width="520" height="473"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hUy-5W-S5a">
+                                                        <rect key="frame" x="0.0" y="0.0" width="520" height="237"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOr-h8-A53">
+                                                                <rect key="frame" x="0.0" y="0.0" width="520" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="21"/>
+                                                                </variation>
+                                                            </label>
+                                                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wTX-Ig-Lcf">
+                                                                <rect key="frame" x="0.0" y="21" width="520" height="216"/>
+                                                                <date key="date" timeIntervalSinceReferenceDate="482257872.46522897">
+                                                                    <!--2016-04-13 16:31:12 +0000-->
+                                                                </date>
+                                                                <variation key="heightClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="21" width="260" height="216"/>
+                                                                </variation>
+                                                            </datePicker>
+                                                        </subviews>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="237"/>
+                                                        </variation>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bqr-gr-IkA">
+                                                        <rect key="frame" x="0.0" y="237" width="520" height="237"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="End" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4R-qP-Gam">
+                                                                <rect key="frame" x="0.0" y="0.0" width="520" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="21"/>
+                                                                </variation>
+                                                            </label>
+                                                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Oj6-Ch-b4U">
+                                                                <rect key="frame" x="0.0" y="21" width="520" height="216"/>
+                                                                <date key="date" timeIntervalSinceReferenceDate="482257880.72979802">
+                                                                    <!--2016-04-13 16:31:20 +0000-->
+                                                                </date>
+                                                                <variation key="heightClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="21" width="260" height="216"/>
+                                                                </variation>
+                                                            </datePicker>
+                                                        </subviews>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="260" y="0.0" width="260" height="237"/>
+                                                        </variation>
+                                                    </stackView>
+                                                </subviews>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="520" height="237"/>
+                                                </variation>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="Yqm-2W-z0y" firstAttribute="leading" secondItem="WiN-H0-edK" secondAttribute="leading" id="5aN-ux-9F7"/>
-                                            <constraint firstAttribute="trailing" secondItem="Yqm-2W-z0y" secondAttribute="trailing" id="CTK-8I-fMM"/>
-                                            <constraint firstItem="Yqm-2W-z0y" firstAttribute="top" secondItem="WiN-H0-edK" secondAttribute="top" id="f8h-fl-8CG"/>
-                                            <constraint firstAttribute="trailing" secondItem="va5-mj-UlM" secondAttribute="trailing" id="qRb-sv-Ce9"/>
-                                            <constraint firstAttribute="bottom" secondItem="va5-mj-UlM" secondAttribute="bottom" id="wJ3-gI-xFk"/>
-                                            <constraint firstItem="va5-mj-UlM" firstAttribute="leading" secondItem="WiN-H0-edK" secondAttribute="leading" id="ypS-cJ-u1i"/>
+                                            <constraint firstItem="WiN-H0-edK" firstAttribute="leading" secondItem="Sm4-Mi-qJ1" secondAttribute="leading" id="P7g-06-VeZ"/>
+                                            <constraint firstItem="WiN-H0-edK" firstAttribute="top" secondItem="Sm4-Mi-qJ1" secondAttribute="top" id="vYR-Bq-wbW"/>
                                         </constraints>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="100" width="520" height="237"/>
+                                        </variation>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="WiN-H0-edK" firstAttribute="top" secondItem="SHR-nX-s8j" secondAttribute="bottom" id="E0O-W2-5gY"/>
-                                    <constraint firstItem="WiN-H0-edK" firstAttribute="leading" secondItem="4s9-nq-Tw4" secondAttribute="leading" id="Jat-gp-oO0"/>
-                                    <constraint firstAttribute="trailing" secondItem="WiN-H0-edK" secondAttribute="trailing" id="RY6-Xb-lL8"/>
+                                    <constraint firstItem="Sm4-Mi-qJ1" firstAttribute="top" secondItem="SHR-nX-s8j" secondAttribute="bottom" id="KFR-3M-DSZ"/>
                                 </constraints>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="40" y="64" width="520" height="337"/>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
