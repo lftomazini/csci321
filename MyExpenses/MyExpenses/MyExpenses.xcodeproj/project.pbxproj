@@ -14,6 +14,7 @@
 		2A2418221C9E06ED00ACF0BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2418201C9E06ED00ACF0BE /* LaunchScreen.storyboard */; };
 		2A24182D1C9E06ED00ACF0BE /* MyExpensesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A24182C1C9E06ED00ACF0BE /* MyExpensesTests.swift */; };
 		2A2418381C9E06EE00ACF0BE /* MyExpensesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2418371C9E06EE00ACF0BE /* MyExpensesUITests.swift */; };
+		2A3218371CBC038200354327 /* RecurrentExpensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3218361CBC038200354327 /* RecurrentExpensesTableViewController.swift */; };
 		2A3D059D1CA9941600D55FDD /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D059C1CA9941600D55FDD /* Expenses.swift */; };
 		2A8D1E271CB6E637007A3C3D /* AddExenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D1E261CB6E637007A3C3D /* AddExenseViewController.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		2A2418331C9E06EE00ACF0BE /* MyExpensesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyExpensesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A2418371C9E06EE00ACF0BE /* MyExpensesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExpensesUITests.swift; sourceTree = "<group>"; };
 		2A2418391C9E06EE00ACF0BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A3218361CBC038200354327 /* RecurrentExpensesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurrentExpensesTableViewController.swift; sourceTree = "<group>"; };
 		2A3D059C1CA9941600D55FDD /* Expenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 		2A8D1E261CB6E637007A3C3D /* AddExenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExenseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 				2A2418201C9E06ED00ACF0BE /* LaunchScreen.storyboard */,
 				2A2418231C9E06ED00ACF0BE /* Info.plist */,
 				2A8D1E261CB6E637007A3C3D /* AddExenseViewController.swift */,
+				2A3218361CBC038200354327 /* RecurrentExpensesTableViewController.swift */,
 			);
 			path = MyExpenses;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A3218371CBC038200354327 /* RecurrentExpensesTableViewController.swift in Sources */,
 				2A8D1E271CB6E637007A3C3D /* AddExenseViewController.swift in Sources */,
 				2A3D059D1CA9941600D55FDD /* Expenses.swift in Sources */,
 				2A24181A1C9E06ED00ACF0BE /* ViewController.swift in Sources */,
