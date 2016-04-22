@@ -41,30 +41,31 @@ class RecurrentExpensesTableViewController: UITableViewController {
     ///
     /// - returns: the recurrent expense's title
     ///
-//    func titleForRow(row: Int) -> String {
+    func titleForRow(row: Int) -> String {
 //        return title = recurrentExpenses[row].item + " - $" + recurrentExpenses[row].value
-//    }
-//    
-//    ///
-//    /// Determines the title for a cell. The title is just the item name and its value.
-//    ///
-//    /// - parameter row: the table row that needs a title
-//    ///
-//    /// - returns: the recurrent expense's title
-//    ///
-//    func subtitleForRow(row: Int) -> String {
-//        return subtitle = 
-//    }
+        return "title"
+    }
+    
+    ///
+    /// Determines the title for a cell. The title is just the item name and its value.
+    ///
+    /// - parameter row: the table row that needs a title
+    ///
+    /// - returns: the recurrent expense's title
+    ///
+    func subtitleForRow(row: Int) -> String {
+        return "subtitle"
+    }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Recurrent Expense", forIndexPath: indexPath) as UITableViewCell
+        cell.textLabel!.text = titleForRow(indexPath.row)
+        cell.detailTextLabel!.text = subtitleForRow(indexPath.row)
 
         // Configure the cell...
 
         return cell
     }
-    */
 
     /*
     // MARK: - Navigation

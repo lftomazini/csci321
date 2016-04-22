@@ -2,6 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>addItem</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Static Action</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Add Item</string>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutItemIconTypeAdd</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict>
+				<key>key</key>
+				<string>value</string>
+			</dict>
+		</dict>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleURLTypes</key>
