@@ -7,8 +7,6 @@
 		<dict>
 			<key>UIApplicationShortcutItemType</key>
 			<string>addItem</string>
-			<key>UIApplicationShortcutItemSubtitle</key>
-			<string>Static Action</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Add Item</string>
 			<key>UIApplicationShortcutItemIconType</key>

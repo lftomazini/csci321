@@ -16,6 +16,7 @@
 		2A2418381C9E06EE00ACF0BE /* MyExpensesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2418371C9E06EE00ACF0BE /* MyExpensesUITests.swift */; };
 		2A3218371CBC038200354327 /* RecurrentExpensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3218361CBC038200354327 /* RecurrentExpensesTableViewController.swift */; };
 		2A3D059D1CA9941600D55FDD /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D059C1CA9941600D55FDD /* Expenses.swift */; };
+		2A80B12B1CCE80BE00C22A1F /* RecurrentExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A80B12A1CCE80BE00C22A1F /* RecurrentExpense.swift */; };
 		2A8D1E271CB6E637007A3C3D /* AddExenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D1E261CB6E637007A3C3D /* AddExenseViewController.swift */; };
 		2A8F69FF1CCA8436007C1564 /* business.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F69F21CCA8436007C1564 /* business.png */; };
 		2A8F6A001CCA8436007C1564 /* food-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F69F31CCA8436007C1564 /* food-1.png */; };
@@ -66,6 +67,7 @@
 		2A2418391C9E06EE00ACF0BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A3218361CBC038200354327 /* RecurrentExpensesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurrentExpensesTableViewController.swift; sourceTree = "<group>"; };
 		2A3D059C1CA9941600D55FDD /* Expenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		2A80B12A1CCE80BE00C22A1F /* RecurrentExpense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurrentExpense.swift; sourceTree = "<group>"; };
 		2A8D1E261CB6E637007A3C3D /* AddExenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExenseViewController.swift; sourceTree = "<group>"; };
 		2A8F69F21CCA8436007C1564 /* business.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = business.png; sourceTree = "<group>"; };
 		2A8F69F31CCA8436007C1564 /* food-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "food-1.png"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				2ABB1F431CC14C3600CFAECE /* ExpensesDataModel.xcdatamodeld */,
 				2A2418191C9E06ED00ACF0BE /* ViewController.swift */,
 				2A3D059C1CA9941600D55FDD /* Expenses.swift */,
+				2A80B12A1CCE80BE00C22A1F /* RecurrentExpense.swift */,
 				2A24181B1C9E06ED00ACF0BE /* Main.storyboard */,
 				2A24181E1C9E06ED00ACF0BE /* Assets.xcassets */,
 				2A2418201C9E06ED00ACF0BE /* LaunchScreen.storyboard */,
@@ -336,6 +339,7 @@
 				2A3D059D1CA9941600D55FDD /* Expenses.swift in Sources */,
 				2A24181A1C9E06ED00ACF0BE /* ViewController.swift in Sources */,
 				2ABB1F451CC14C3600CFAECE /* ExpensesDataModel.xcdatamodeld in Sources */,
+				2A80B12B1CCE80BE00C22A1F /* RecurrentExpense.swift in Sources */,
 				2A2418181C9E06ED00ACF0BE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,24 +481,28 @@
 		2A24183D1C9E06EE00ACF0BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyExpenses/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LuisFelipe.MyExpenses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
 		2A24183E1C9E06EE00ACF0BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyExpenses/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LuisFelipe.MyExpenses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};

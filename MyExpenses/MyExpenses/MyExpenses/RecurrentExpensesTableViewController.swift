@@ -11,7 +11,7 @@ import UIKit
 class RecurrentExpensesTableViewController: UITableViewController {
 
     /// Each array entry is a dictionary that describes a expense
-    var recurrentExpenses: [[String: Expenses]] = [] {
+    var recurrentExpenses: [[String: RecurrentExpense]] = [] {
         didSet{
             tableView.reloadData()
         }

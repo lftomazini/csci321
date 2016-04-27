@@ -67,4 +67,4 @@ class Expenses: CustomStringConvertible, Comparable {
 
     func ==(left: Expenses, right: Expenses) -> Bool {
     return left.date == right.date && left.value == right.value && left.item == right.item && left.category == right.category
-    }
+}
