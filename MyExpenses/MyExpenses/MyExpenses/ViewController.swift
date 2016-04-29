@@ -14,11 +14,17 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //title = "\"The List\""
         tableView?.registerClass(UITableViewCell.self,
                                 forCellReuseIdentifier: "Cell")
-        let shortcut = UIApplicationShortcutItem(type: "addItem", localizedTitle: "Add Item", localizedSubtitle: "Dynamic Action", icon: UIApplicationShortcutIcon(type: .Add), userInfo: nil)
-        UIApplication.sharedApplication().shortcutItems = [shortcut]
+        
+        // creates 3d-touch shortcut for add item
+        let add = UIApplicationShortcutItem(type: "addItem", localizedTitle: "Add Item", localizedSubtitle: "", icon: UIApplicationShortcutIcon(type: .Add), userInfo: nil)
+        
+        // creates 3d-touch shortcut for add recurrent item
+        let addRecurrent = UIApplicationShortcutItem(type: "addRecurrentItem", localizedTitle: "Add Recurrent Item", localizedSubtitle: "", icon: UIApplicationShortcutIcon(type: .Search), userInfo: nil)
+        
+        // adds shortcuts to homescreen
+        UIApplication.sharedApplication().shortcutItems = [add, addRecurrent]
     }
 
     @IBOutlet weak var tableView: UITableView!

@@ -3,21 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemType</key>
-			<string>addItem</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Add Item</string>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutItemIconTypeAdd</string>
-			<key>UIApplicationShortcutItemUserInfo</key>
-			<dict>
-				<key>key</key>
-				<string>value</string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleURLTypes</key>

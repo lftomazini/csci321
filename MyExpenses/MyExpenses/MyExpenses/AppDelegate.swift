@@ -47,16 +47,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Core Data stack
     
     func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        
+        // if add item in 3d touch is selected
         if shortcutItem.type == "addItem" {
-            let nav = self.window!.rootViewController as! UINavigationController
-            let viewController = nav.popViewControllerAnimated(true) as! AddExpenseViewController
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nav = storyboard.instantiateViewControllerWithIdentifier("addExpenseNavigation") as! UINavigationController
+            let viewController = nav.viewControllers.first as! AddExpenseViewController
+            self.window?.rootViewController?.presentViewController(nav, animated: true, completion: {
+                completionHandler(true)
+            })
             
             viewController.addNew(UIButton())
-            print ("added")
-            
-            completionHandler(true)
         }
         
+        // if add recurrent item is selected
+//        if shortcutItem.type == "addRecurrentItem" {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let nav = storyboard.instantiateViewControllerWithIdentifier("addRecurrentExpenseNavigation") as! UINavigationController
+//            let viewController = nav.viewControllers.first as! RecurrentExpensesTableViewController
+//            self.window?.rootViewController?.presentViewController(nav, animated: true, completion: {
+//                completionHandler(true)
+//            })
+//            
+//            viewController.addNew(UIButton())
+//        }
+
         completionHandler(false)
     }
     

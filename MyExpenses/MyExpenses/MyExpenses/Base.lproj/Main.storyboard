@@ -1067,7 +1067,7 @@
         <!--Navigation Controller-->
         <scene sceneID="08f-BI-65A">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u12-v6-Z5j" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="addExpenseNavigation" automaticallyAdjustsScrollViewInsets="NO" id="u12-v6-Z5j" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EI6-V7-8Yv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1125,7 +1125,7 @@
         <!--Navigation Controller-->
         <scene sceneID="tNS-3D-ta3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RfX-rz-wxf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="addRecurrentExpenseNavigation" automaticallyAdjustsScrollViewInsets="NO" id="RfX-rz-wxf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2ek-SD-fKo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
