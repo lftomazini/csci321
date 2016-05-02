@@ -13,23 +13,20 @@ class AddExpenseViewController: ViewController {
     @IBOutlet weak var valueTitleField: UITextField!
     @IBOutlet weak var dayBoughtDatePicker: UIDatePicker!
     
-    var entries = [Expenses]()
+    var expense: Expenses!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func cancel(segue: UIStoryboardSegue) {
-        print("cancel")
+    ///
+    /// Creates an Expense instance with the title and band when the segue is the
+    /// result of tapping on the Done button.
+    ///
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "AddExpense" {
+            expense = Expenses(category: Expenses.Categories.Drinks, date: dayBoughtDatePicker.date, value: (valueTitleField.text! as NSString).floatValue, item: itemTitleField.text!)
+        }
     }
-    
-    @IBAction func done(segue: UIStoryboardSegue) {
-        print("done")
-        let newExpense = Expenses(category: Expenses.Categories.Books, date: dayBoughtDatePicker.date as NSDate,value: NSString(string: valueTitleField.text!).floatValue as Float,item: itemTitleField.text! as String)
-        entries.append(newExpense)
-        //        let textField = alert.textFields!.first
-//        self.names.append(textField!.text!)
-//        self.tableView.reloadData()
-        dismissViewControllerAnimated(true, completion: nil)
-    }
+
 }

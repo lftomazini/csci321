@@ -26,6 +26,18 @@ class ViewController: UIViewController, UITableViewDataSource {
         // adds shortcuts to homescreen
         UIApplication.sharedApplication().shortcutItems = [add, addRecurrent]
     }
+    
+    @IBAction func cancel(segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func done(segue: UIStoryboardSegue) {
+//        let newExpense = Expenses(category: Expenses.Categories.Books, date: dayBoughtDatePicker.date as NSDate,value: NSString(string: valueTitleField.text!).floatValue as Float,item: itemTitleField.text! as String)
+//        entries.append(newExpense)
+//        //        let textField = alert.textFields!.first
+//        //        self.names.append(textField!.text!)
+//        //        self.tableView.reloadData()
+//        dismissViewControllerAnimated(true, completion: nil)
+    }
 
     @IBOutlet weak var tableView: UITableView!
     

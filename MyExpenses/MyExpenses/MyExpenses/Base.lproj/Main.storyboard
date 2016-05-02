@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4s9-nq-Tw4">
-                                <rect key="frame" x="20" y="64" width="560" height="437"/>
+                                <rect key="frame" x="20" y="74" width="560" height="437"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNC-JC-lzL">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
@@ -510,16 +510,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4s9-nq-Tw4" firstAttribute="leading" secondItem="nfw-hz-hU6" secondAttribute="leadingMargin" id="HuE-fH-Z1h"/>
-                            <constraint firstItem="4s9-nq-Tw4" firstAttribute="top" secondItem="gOq-FN-ryz" secondAttribute="bottom" id="L3w-cg-5s0"/>
+                            <constraint firstItem="4s9-nq-Tw4" firstAttribute="top" secondItem="gOq-FN-ryz" secondAttribute="bottom" constant="10" id="L3w-cg-5s0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4s9-nq-Tw4" secondAttribute="trailing" id="UAd-wZ-ABf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HHf-cN-R5C">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lUx-FA-3ol"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7BM-MI-RzY"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lUx-FA-3ol">
+                            <connections>
+                                <segue destination="Yaz-cq-TNF" kind="unwind" unwindAction="cancel:" id="6zp-cx-cIL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7BM-MI-RzY">
+                            <connections>
+                                <segue destination="Yaz-cq-TNF" kind="unwind" unwindAction="done:" id="P9s-kN-RH3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCw-pW-iII" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Yaz-cq-TNF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1137" y="-1179"/>
         </scene>
@@ -1044,12 +1053,12 @@
                     <navigationItem key="navigationItem" title="Add Expense" id="Qct-pd-OJM">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="MhG-9L-dtB">
                             <connections>
-                                <segue destination="wDD-wi-RNS" kind="unwind" unwindAction="cancel:" id="Vjd-w9-kKv"/>
+                                <segue destination="wDD-wi-RNS" kind="unwind" unwindAction="cancel:" id="ola-tH-ZHy"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="LeC-OJ-1Ln">
                             <connections>
-                                <segue destination="wDD-wi-RNS" kind="unwind" unwindAction="done:" id="7Dd-Mb-T9h"/>
+                                <segue destination="wDD-wi-RNS" kind="unwind" identifier="AddExpense" unwindAction="done:" id="xw5-jU-F2E"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

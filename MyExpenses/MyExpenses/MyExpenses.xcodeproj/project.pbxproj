@@ -31,6 +31,7 @@
 		2A8F6A091CCA8436007C1564 /* technology.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F69FC1CCA8436007C1564 /* technology.png */; };
 		2A8F6A0A1CCA8436007C1564 /* transport.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F69FD1CCA8436007C1564 /* transport.png */; };
 		2A8F6A0B1CCA8436007C1564 /* travel.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F69FE1CCA8436007C1564 /* travel.png */; };
+		2A9789741CD3C566009E4808 /* AddRecurrentExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9789731CD3C566009E4808 /* AddRecurrentExpenseViewController.swift */; };
 		2ABB1F451CC14C3600CFAECE /* ExpensesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2ABB1F431CC14C3600CFAECE /* ExpensesDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		2A8F69FC1CCA8436007C1564 /* technology.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = technology.png; sourceTree = "<group>"; };
 		2A8F69FD1CCA8436007C1564 /* transport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transport.png; sourceTree = "<group>"; };
 		2A8F69FE1CCA8436007C1564 /* travel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = travel.png; sourceTree = "<group>"; };
+		2A9789731CD3C566009E4808 /* AddRecurrentExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecurrentExpenseViewController.swift; sourceTree = "<group>"; };
 		2ABB1F441CC14C3600CFAECE /* ExpensesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpensesDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 				2A2418201C9E06ED00ACF0BE /* LaunchScreen.storyboard */,
 				2A2418231C9E06ED00ACF0BE /* Info.plist */,
 				2A8D1E261CB6E637007A3C3D /* AddExenseViewController.swift */,
+				2A9789731CD3C566009E4808 /* AddRecurrentExpenseViewController.swift */,
 				2A3218361CBC038200354327 /* RecurrentExpensesTableViewController.swift */,
 			);
 			path = MyExpenses;
@@ -338,6 +341,7 @@
 				2A8D1E271CB6E637007A3C3D /* AddExenseViewController.swift in Sources */,
 				2A3D059D1CA9941600D55FDD /* Expenses.swift in Sources */,
 				2A24181A1C9E06ED00ACF0BE /* ViewController.swift in Sources */,
+				2A9789741CD3C566009E4808 /* AddRecurrentExpenseViewController.swift in Sources */,
 				2ABB1F451CC14C3600CFAECE /* ExpensesDataModel.xcdatamodeld in Sources */,
 				2A80B12B1CCE80BE00C22A1F /* RecurrentExpense.swift in Sources */,
 				2A2418181C9E06ED00ACF0BE /* AppDelegate.swift in Sources */,

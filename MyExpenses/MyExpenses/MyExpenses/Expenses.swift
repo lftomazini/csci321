@@ -37,6 +37,13 @@ class Expenses: CustomStringConvertible, Comparable {
         return "\(item) - \(category): $\(value) bought on \(date)"
     }
     
+    ///
+    /// Initializes an Expenses instance.
+    /// - parameter category: the name of the category of the item
+    /// - parameter date: the date when the item was bought
+    /// - parameter value: the value of the item bought
+    /// - parameter item: the name description of the item
+    ///
     init(category: Categories, date: NSDate, value: Float, item: String) {
         self.category = category
         self.date = date
@@ -45,26 +52,25 @@ class Expenses: CustomStringConvertible, Comparable {
     }
 }
 
-///
-/// Overloads the less than operator so we can compare expenses.
-/// - parameter left: left operand
-/// - parameter right: right operand
-/// - returns: true if left < right, false otherwise
-///
+    ///
+    /// Overloads the less than operator so we can compare expenses.
+    /// - parameter left: left operand
+    /// - parameter right: right operand
+    /// - returns: true if left < right, false otherwise
+    ///
     func <(left: Expenses, right: Expenses) -> Bool {
-//    if left.band == right.band {
-//    return left.title < right.title
-//    }
-//    return left.band < right.band
+        //    if left.band == right.band {
+        //    return left.title < right.title
+        //    }
+        //    return left.band < right.band
         return true
     }
 
-///
-/// Overloads the equality operator so we can compare expenses.
-/// - parameter left: left operand
-/// - parameter right: right operand
-/// - returns: true if left == right, false otherwise.
-
+    ///
+    /// Overloads the equality operator so we can compare expenses.
+    /// - parameter left: left operand
+    /// - parameter right: right operand
+    /// - returns: true if left == right, false otherwise.
     func ==(left: Expenses, right: Expenses) -> Bool {
-    return left.date == right.date && left.value == right.value && left.item == right.item && left.category == right.category
+        return left.date == right.date && left.value == right.value && left.item == right.item && left.category == right.category
 }
