@@ -8,6 +8,10 @@
 
 import UIKit
 
+
+///
+/// Class of type Expenses that has the attributes of a new Expenses object
+///
 class Expenses: CustomStringConvertible, Comparable {
     
     /// Available categories for expenses
@@ -28,9 +32,16 @@ class Expenses: CustomStringConvertible, Comparable {
         case Travel
     }
     
+    /// Category of an expense
     let category: Categories
+    
+    /// Date in which an expense was bought
     let date: NSDate
+    
+    /// Price paid for an expense
     let value: Float
+    
+    /// Inofrmation of the expense
     let item: String
     
     var description: String {

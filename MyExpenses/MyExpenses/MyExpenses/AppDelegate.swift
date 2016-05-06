@@ -44,11 +44,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
     
-    // MARK: - Core Data stack
-    
+    ///
+    /// Allows the app to use 3D touch shortcuts from the home-screen
+    ///
     func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
         
-        // if add item in 3d touch is selected
         if shortcutItem.type == "addItem" {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let nav = storyboard.instantiateViewControllerWithIdentifier("addExpenseNavigation") as! UINavigationController
@@ -59,21 +59,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             viewController.addNew(UIButton())
         }
-        
-        // if add recurrent item is selected
-//        if shortcutItem.type == "addRecurrentItem" {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let nav = storyboard.instantiateViewControllerWithIdentifier("addRecurrentExpenseNavigation") as! UINavigationController
-//            let viewController = nav.viewControllers.first as! RecurrentExpensesTableViewController
-//            self.window?.rootViewController?.presentViewController(nav, animated: true, completion: {
-//                completionHandler(true)
-//            })
-//            
-//            viewController.addNew(UIButton())
-//        }
-
         completionHandler(false)
     }
+
+    // MARK: - Core Data stack
     
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.xxx.ProjectName" in the application's documents Application Support directory.

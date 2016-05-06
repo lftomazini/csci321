@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bJJ-w5-qkc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bJJ-w5-qkc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Recurrent Expense View Controller-->
         <scene sceneID="9sf-dQ-3Up">
             <objects>
-                <viewController id="1oI-h9-Ts7" sceneMemberID="viewController">
+                <viewController id="1oI-h9-Ts7" customClass="AddRecurrentExpenseViewController" customModule="MyExpenses" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gOq-FN-ryz"/>
                         <viewControllerLayoutGuide type="bottom" id="fmy-Sv-yXY"/>
@@ -526,6 +526,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="finalTimeDatePicker" destination="Oj6-Ch-b4U" id="nO8-fS-K4P"/>
+                        <outlet property="initialTimeDatePicker" destination="wTX-Ig-Lcf" id="nk4-WA-Rw7"/>
+                        <outlet property="itemTitleField" destination="Kql-RU-Fq3" id="VhQ-tI-Z30"/>
+                        <outlet property="valueTitleField" destination="hNR-gh-Nq3" id="N34-7e-StE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCw-pW-iII" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Yaz-cq-TNF" userLabel="Exit" sceneMemberID="exit"/>
@@ -592,10 +598,10 @@
             </objects>
             <point key="canvasLocation" x="1137" y="-465"/>
         </scene>
-        <!--View Controller-->
+        <!--Graph View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyExpenses" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GraphViewController" customModule="MyExpenses" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -664,7 +670,18 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fge-Mx-8bV">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="268"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graph.png" translatesAutoresizingMaskIntoConstraints="NO" id="eZK-hO-nGl">
+                                                <rect key="frame" x="0.0" y="20" width="600" height="248"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="eZK-hO-nGl" firstAttribute="leading" secondItem="fge-Mx-8bV" secondAttribute="leading" id="AjM-2C-j2H"/>
+                                            <constraint firstAttribute="bottom" secondItem="eZK-hO-nGl" secondAttribute="bottom" id="E1M-au-zme"/>
+                                            <constraint firstItem="eZK-hO-nGl" firstAttribute="top" secondItem="fge-Mx-8bV" secondAttribute="top" constant="20" id="k0g-fz-ejY"/>
+                                            <constraint firstAttribute="trailing" secondItem="eZK-hO-nGl" secondAttribute="trailing" id="wsy-eJ-61E"/>
+                                        </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tdN-6k-gbc">
                                         <rect key="frame" x="0.0" y="268" width="600" height="268"/>
@@ -1155,6 +1172,7 @@
         <image name="food-1.png" width="256" height="256"/>
         <image name="food.png" width="256" height="256"/>
         <image name="fun.png" width="256" height="256"/>
+        <image name="graph.png" width="1246" height="1246"/>
         <image name="home.png" width="256" height="256"/>
         <image name="library.png" width="256" height="256"/>
         <image name="medical.png" width="256" height="256"/>

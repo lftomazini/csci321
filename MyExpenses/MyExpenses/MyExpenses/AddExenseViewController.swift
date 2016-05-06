@@ -8,7 +8,10 @@
 
 import UIKit
 
-class AddExpenseViewController: ViewController {
+///
+/// View controller to manage the creation of new expenses
+///
+class AddExpenseViewController: GraphViewController {
     @IBOutlet weak var itemTitleField: UITextField!
     @IBOutlet weak var valueTitleField: UITextField!
     @IBOutlet weak var dayBoughtDatePicker: UIDatePicker!
@@ -28,5 +31,4 @@ class AddExpenseViewController: ViewController {
             expense = Expenses(category: Expenses.Categories.Drinks, date: dayBoughtDatePicker.date, value: (valueTitleField.text! as NSString).floatValue, item: itemTitleField.text!)
         }
     }
-
 }

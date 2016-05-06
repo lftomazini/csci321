@@ -8,6 +8,9 @@
 
 import UIKit
 
+///
+/// Manages the Recurrent expenses added
+///
 class RecurrentExpensesTableViewController: UITableViewController {
 
     /// Each array entry is a dictionary that describes a expense
@@ -19,12 +22,6 @@ class RecurrentExpensesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     ///
@@ -42,7 +39,6 @@ class RecurrentExpensesTableViewController: UITableViewController {
     /// - returns: the recurrent expense's title
     ///
     func titleForRow(row: Int) -> String {
-//        return title = recurrentExpenses[row].item + " - $" + recurrentExpenses[row].value
         return "title"
     }
     
@@ -57,23 +53,14 @@ class RecurrentExpensesTableViewController: UITableViewController {
         return "subtitle"
     }
 
+    ///
+    /// Manages a cell instance of the table view
+    ///
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Recurrent Expense", forIndexPath: indexPath) as UITableViewCell
         cell.textLabel!.text = titleForRow(indexPath.row)
         cell.detailTextLabel!.text = subtitleForRow(indexPath.row)
 
-        // Configure the cell...
-
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
